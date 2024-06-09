@@ -50,91 +50,138 @@ body {
     2% {
         transform: translateX(1);
     }
-
     25% {
         transform: translateX(-25%);
     }
-
     50% {
         transform: translateX(-50%);
     }
-
     75% {
         transform: translateX(-25%);
     }
-
     100% {
         transform: translateX(1);
     }
 }
 
-.lista{
-	display: flex;
-	justify-content: space-between ;
-}
-#user{
-	width: 50px;
-	height: 50px;
-}
-#estrella{
-	width: 30px;
-	height: 30px;
-}
-#trofeo{
-	width: 50px;
-	height: 50px;
-	margin-top: -5px;
-	margin-left: -10px;
-}
-.jugadorINI{
-	margin: 10px;
-	display: flex; 
-	align-items: center;
-	margin-left: 10px;
+.lista {
+    display: flex;
+    justify-content: space-between;
 }
 
-.jugador{
-	margin-left: 50px;
-	background-color: rgb(34, 112, 14);
-	height: 30px;
+#user {
+    width: 50px;
+    height: 50px;
+}
+
+#estrella {
+    width: 30px;
+    height: 30px;
+}
+
+#trofeo {
+    width: 50px;
+    height: 50px;
+    margin-top: -5px;
+    margin-left: -10px;
+}
+
+.jugadorINI {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.jugador {
+    margin-left: 50px;
+    background-color: rgb(34, 112, 14);
+    height: 30px;
     width: 70%;
-	display: flex; 
-	border-radius: 8px;
-	
-	justify-content: space-between;
-	align-items: center;
-	color: white;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
+
 .Titulo {
-	margin-left: 500px;
-	margin-top: 50px;
-	display: inline-block; /* Ajusta el contenedor al tamaño del contenido */
-	border: 5px solid rgba(48, 158, 21, 0); /* Borde blanco ancho */
-	padding: 10px; /* Espacio interno para separar el contenido del borde */
+    text-align: center;
+    margin-top: 50px;
+    border: 5px solid rgba(48, 158, 21, 0);
+    padding: 10px;
 }
+
 .Titulo h1 {
-	color: white; /* Color del texto */
-	font-size: 3em; /* Tamaño grande de la letra */
-	margin: 0; /* Elimina márgenes predeterminados */
-}
-#logo{
-	margin-left: 10px;
-}
-#estrella{
-	margin-right: 10px;
+    color: white;
+    font-size: 3em;
+    margin: 0;
 }
 
+#logo {
+    margin-left: 10px;
+}
 
-.listajugadores{
+#estrella {
+    margin-right: 10px;
+}
+
+.listajugadores {
     border-radius: 20px;
-	width: 60%;
-	margin-left: 290px;
-	display: flex; 
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
     flex-direction: column;
-	background: rgba(255, 255, 255, 0.192);
+    background: rgba(255, 255, 255, 0.192);
     border: 5px solid rgb(255, 255, 255);
     backdrop-filter: blur(50px);
-	justify-content: space-around;
-	margin-bottom: 500px;
-	
+    justify-content: space-around;
+    margin-bottom: 500px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .Titulo h1 {
+        font-size: 2.5em;
+    }
+
+    .listajugadores {
+        width: 80%;
+    }
+
+    .jugador {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+
+    .jugador h4 {
+        margin: 5px 0;
+    }
+
+    #estrella {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .Titulo h1 {
+        font-size: 2em;
+    }
+
+    .listajugadores {
+        width: 100%;
+    }
+
+    .jugador {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .jugadorINI {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
